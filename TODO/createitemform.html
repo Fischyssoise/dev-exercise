@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!--Page created by: Andrew Fischer-->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Create New Item</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/scripts.js" ></script>
+</head>
+<body>
+
+	<!-- Header Menu -->
+	<header>
+		<div>
+			<a href="index.html">X</a>
+			<h1>Page Title</h1>
+		</div>
+	</header>		
+	<!-- Main Content -->
+	<main>
+        <div id="form"><!--Start Form-->
+            <h2>New Item</h2>
+            <form>
+                <fieldset>
+                    <legend>New Item</legend>
+                    <textarea id=description name=description rows="5" placeholder="Enter description" autofocus required></textarea>
+                    <label for="priority">Priority</label>
+                        <select id=priority name="priority">
+                            <option>Regular</option>
+                            <option>High</option>
+                            <option>Low</option>
+                        </select>
+                </fieldset>
+
+                <input type="submit" onclick="alert('Added to List!')" value="Add" class="btn">
+                <input type="reset" value="Reset" class="btn">
+            </form>
+        </div>
+	</main>
+		
+	<!--Footer-->
+	<footer>
+		<p>Created by: Andrew Fischer - 2024</p>
+		<p><a href="ajfisch013@gmail.com">ajfisch013@gmail.com</a></p>
+	</footer>
+</body>
+</html>
