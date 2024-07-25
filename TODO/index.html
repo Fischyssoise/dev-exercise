@@ -7,7 +7,6 @@
 	<meta charset="utf-8">
 	<title>To Do</title>
 	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/scripts.js" ></script>
 </head>
 <body>
 
@@ -20,22 +19,46 @@
 	</header>		
 	<nav>
 		<ul>
-            <li><a href="createitemform.html">Add Item</a></li>
-            <li>Search: <input type="search" name="search"></li>
-	    	<li>Toggle View Button: <input type="button" onclick="alert('View Switched!')" value="View List / View Card"></li>
+			<!--Add Item-->
+			<li><input type="button" onclick="document.querySelector('#newTodo').style.visibility='visible'" value="+ Add Item"></li>
+			<!--Search-->
+            <!--<li><input type="search" name="search" autofocus> <input type="submit" value="Search" class="btn"></li>-->
+			<!--Toggle View-->
+	    	<li><input type="button" onclick="viewCardList();" value="View List / View Card"></li>
 		</ul>
 	</nav>	
 		
 	<!-- Main Content -->
-	<main>
-        <h2>Items</h2>	
+	<main>	  
+        <h2>Items</h2>
 		To Do Items (List/Card)
-		<div class="card">
-			<div class="container">
-			  <h4><b>Item 1</b></h4>
-			  <p>Description</p>
-			</div>
-		  </div>
+		<div id="todoItems" class="list">
+			<ul id=todos>
+				<div class="container">
+					<h4><b>Item 1</b></h4>
+					<p>Description</p>
+				</div>
+			</ul>
+		</div>
+
+		<div id="todoForm"><!--Start Form-->
+            <h2>New Item</h2>
+            <form id="newTodo">
+                <fieldset>
+                    <legend>New Item</legend>
+                    <textarea id=description name=description rows="5" placeholder="Enter description" required></textarea>
+                    <label for="priority">Priority</label>
+                        <select id=priority name="priority">
+                            <option>Regular</option>
+                            <option>High</option>
+                            <option>Low</option>
+                        </select>
+                </fieldset>
+
+                <input type="submit" onclick="toggleForm();" id="submit" value ="Add" class="btn">
+                <input type="reset" value="Reset" class="btn">
+            </form>
+        </div>
 	</main>
 		
 	<!--Footer-->
@@ -43,5 +66,7 @@
 		<p>Created by: Andrew Fischer - 2024</p>
 		<p><a href="ajfisch013@gmail.com">ajfisch013@gmail.com</a></p>
 	</footer>
+	<script src="js/scripts.js" ></script>
+	<script src="js/test.js" ></script>
 </body>
 </html>
