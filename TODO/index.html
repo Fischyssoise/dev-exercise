@@ -20,27 +20,16 @@
 	<nav>
 		<ul>
 			<!--Add Item-->
-			<li><input type="button" onclick="document.querySelector('#newTodo').style.visibility='visible'" value="+ Add Item"></li>
+			<li><input id="addTodo" type="button" onclick="toggleForm();" value="+ Add Item"></li>
 			<!--Search-->
             <!--<li><input type="search" name="search" autofocus> <input type="submit" value="Search" class="btn"></li>-->
 			<!--Toggle View-->
-	    	<li><input type="button" onclick="viewCardList();" value="View List / View Card"></li>
+	    	<li><input type="button" onclick="toggleCardList();" value="View List / View Card"></li>
 		</ul>
 	</nav>	
 		
 	<!-- Main Content -->
-	<main>	  
-        <h2>Items</h2>
-		To Do Items (List/Card)
-		<div id="todoItems" class="list">
-			<ul id=todos>
-				<div class="container">
-					<h4><b>Item 1</b></h4>
-					<p>Description</p>
-				</div>
-			</ul>
-		</div>
-
+	<main>
 		<div id="todoForm"><!--Start Form-->
             <h2>New Item</h2>
             <form id="newTodo">
@@ -55,10 +44,23 @@
                         </select>
                 </fieldset>
 
-                <input type="submit" onclick="toggleForm();" id="submit" value ="Add" class="btn">
+                <input type="submit"  id="submit" value ="Add" class="btn">
                 <input type="reset" value="Reset" class="btn">
             </form>
         </div>
+		
+        <h2>Items</h2>
+		To Do Items (List/Card)
+		<div id="todoList">
+			<ul id=todos>
+				<div id="todoItem" class="list">
+					<h4><b>Item 1</b></h4>
+					<p>Description</p>
+				</div>
+			</ul>
+		</div>
+
+		
 	</main>
 		
 	<!--Footer-->
