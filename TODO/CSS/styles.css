@@ -12,6 +12,10 @@ nav ul {
     display: none;
 }
 
+#todoForm.display {
+    display: block;
+}
+
 #todoForm h2 {
     text-align: center;
 }
@@ -37,7 +41,6 @@ form #button {
     font-size: 0.75em;
 }
 
-
 /* Tablet Viewport: Style rule for form element */
 @media screen and (min-width: 769px), print {
     form { 
@@ -60,14 +63,12 @@ form #button {
     }
 }
 
-
 .btn {
     grid-column: 1 / span 3;
 }
 
 /* Style rules for list elements */
 .container {
-    
     padding: 2px 16px;
 }
 
