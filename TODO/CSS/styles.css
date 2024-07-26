@@ -6,9 +6,9 @@ nav ul {
 /* Style rules for form elements */
 
 #todoForm {
-    margin-top: 2%;
+    margin-top: 1%;
     background-color: #f2f2f2;
-    padding: 2%;
+    padding: 1%;
     display: none;
 }
 
@@ -30,36 +30,36 @@ label {
     padding-top: 3%;
 }
 
-form #submit {
+form #button {
     margin: 0 auto;
-    border: none;
-    display: block;
-    padding: 2%;
-    background-color: #b3b3b3;
-    font-size: 1em;
-    border-radius: 5px;
+    display: float;
+    padding: 0.5%;
+    font-size: 0.75em;
 }
 
 
 /* Tablet Viewport: Style rule for form element */
-
-form { 
-    width: 70%;
-    margin: 0 auto;
+@media screen and (min-width: 769px), print {
+    form { 
+        width: 70%;
+        margin: 0 auto;
+    }
 }
-
 
 /* Desktop Viewport: Style rules for form elements */
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+    form {
+        width: auto;
+    }
 
-form {
-    width: auto;
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+    }
 }
 
-.form-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-}
 
 .btn {
     grid-column: 1 / span 3;
