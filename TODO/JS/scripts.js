@@ -6,10 +6,10 @@ function toggleForm() {
 }
 
 //Return list items
-const viewToggle = document.querySelectorAll("#todoItem");
 
 function toggleCardList() {
-    viewToggle.classList.toggle(card);
+    const todoItems = document.querySelectorAll("#todoItem");
+    todoItems.forEach(x => x.classList.toggle("card"));
 }
 
 //Create list item
