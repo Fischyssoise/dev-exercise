@@ -1,9 +1,15 @@
+//Toggle Complete
+function toggleComplete(event) {
+  event.target.classList.toggle("complete");
+};
+
 //Create list item
 function createTodo(todo) {
   const todos = document.querySelector("ul#todos");
   const newDiv = document.createElement("div");
   newDiv.classList.add("todoItem", "list");
   newDiv.textContent = todo;
+  newDiv.addEventListener("click", toggleComplete);
   todos.append(newDiv);
 }
 
@@ -26,10 +32,4 @@ function toggleCardList() {
   const todos = document.querySelector("ul#todos");
   todos.classList.toggle("card");
 }
-
-//Toggle Complete
-  todoItem.addEventListener("click", function (event) {
-    const todoItem = document.querySelector(".todoItem");
-    event.todoItem.classList.toggle("complete");
-  });
 
