@@ -1,9 +1,6 @@
-const todos = document.querySelector("ul#todos");
-const todoItem = document.querySelector("todoItem");
-
 //Create list item
-
 function createTodo(todo) {
+  const todos = document.querySelector("ul#todos");
   const newDiv = document.createElement("div");
   newDiv.classList.add("todoItem", "list");
   newDiv.textContent = todo;
@@ -19,19 +16,20 @@ document.querySelector("#newTodo").addEventListener("submit", function (event) {
 });
 
 //Show/hide form
-const todoForm = document.querySelector("#todoForm");
-
 function toggleForm() {
+  const todoForm = document.querySelector("#todoForm");
   todoForm.classList.toggle("display");
 }
 
 //List/Card View
 function toggleCardList() {
+  const todos = document.querySelector("ul#todos");
   todos.classList.toggle("card");
 }
 
 //Toggle Complete
   todoItem.addEventListener("click", function (event) {
-    event.preventDefault();
-    todoItem.classList.toggle("complete")
+    const todoItem = document.querySelector(".todoItem");
+    event.todoItem.classList.toggle("complete");
   });
+
