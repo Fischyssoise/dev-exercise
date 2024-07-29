@@ -1,7 +1,13 @@
 nav ul {
-    grid-column: 1;
+    list-style-type: none;
+    margin: 1%;
+    padding-inline-start: 1%;
+    display: inline-flex;
 }
 
+nav li {
+    padding: 2%;
+}
 
 /* Style rules for form elements */
 
