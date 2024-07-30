@@ -64,6 +64,7 @@ label {
     transition: 0.3s;
     border-radius: 5px;
     padding: 0.75em;
+    overflow: scroll;
   }
 
 .card:hover > div {
