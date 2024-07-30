@@ -18,6 +18,7 @@ document.querySelector("#newTodo").addEventListener("submit", function (event) {
   const inputField = document.querySelector("#description");
   const todoMessage = inputField.value;
   createTodo(todoMessage);
+  inputField.value= "";
   toggleForm();
 });
 
@@ -25,6 +26,9 @@ document.querySelector("#newTodo").addEventListener("submit", function (event) {
 function toggleForm() {
   const todoForm = document.querySelector("#todoForm");
   todoForm.classList.toggle("display");
+  const inputField = document.querySelector("#description");
+  const todoMessage = inputField.value;
+  inputField.value= "";
 }
 
 //List/Card View
