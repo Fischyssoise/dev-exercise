@@ -1,98 +1,101 @@
 .container {
-    display: flex;
-  }
+  display: flex;
+}
 
 nav ul {
-    list-style-type: none;
-    margin: 1%;
-    padding-inline-start: 1%;
-    display: inline-flex;
+  list-style-type: none;
+  margin: 1%;
+  padding-inline-start: 1%;
+  display: inline-flex;
 }
 
 nav li {
-    padding: 2%;
+  padding: 2%;
 }
 
 /* Style rules for form elements */
 
 #todoForm {
-    margin-top: 1%;
-    background-color: #f2f2f2;
-    padding: 1%;
-    display: none;
+  margin-top: 1%;
+  background-color: #f2f2f2;
+  padding: 1%;
+  display: none;
 }
 
 #todoForm.display {
-    display: block;
+  display: block;
 }
 
 #todoForm h2 {
-    text-align: center;
+  text-align: center;
 }
 
-fieldset, input, select, textarea {
-    margin-bottom: 2%;
+fieldset,
+input,
+select,
+textarea {
+  margin-bottom: 2%;
 }
 
 fieldset legend {
-    font-weight: bold;
-    font-size: 1.25em;
+  font-weight: bold;
+  font-size: 1.25em;
 }
 
 label {
-    display: block;
-    padding-top: 3%;
+  display: block;
+  padding-top: 3%;
 }
 
 form #button {
-    margin: 0 auto;
-    display: float;
-    padding: 0.5%;
-    font-size: 0.75em;
+  margin: 0 auto;
+  display: float;
+  padding: 0.5%;
+  font-size: 0.75em;
 }
 
 /* Tablet Viewport: Style rule for form element */
 @media screen and (min-width: 769px), print {
-    form { 
-        width: 70%;
-        margin: 0 auto;
-    }
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 /* Desktop Viewport: Style rules for form elements */
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1000px), print {
-    form {
-        width: auto;
-    }
+  form {
+    width: auto;
+  }
 
-    .form-grid {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-gap: 10px;
-    }
+  .form-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+  }
 }
 
 .btn {
-    grid-column: 1 / span 3;
+  grid-column: 1 / span 3;
 }
 
 /* Style rules for list elements */
 .container {
-    padding: 2px 16px;
+  padding: 2px 16px;
 }
 
 /* Style rules for card view elements */
 .card > div {
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
 }
 
 .card:hover > div {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .complete {
-    color: green;
+  color: green;
 }

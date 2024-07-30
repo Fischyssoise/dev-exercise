@@ -3,63 +3,80 @@
 <!--Template created by: Andrew Fischer-->
 
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>To Do</title>
-	<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>To Do</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header Menu -->
+    <header>
+      <div>
+        <a href="index.html"></a>
+        <h1>To Do or Not To Do</h1>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <!--Add Item-->
+        <li>
+          <input
+            id="addTodo"
+            type="button"
+            onclick="toggleForm();"
+            value="+ Add Item"
+          />
+        </li>
+        <li>
+          <input
+            type="button"
+            onclick="toggleCardList();"
+            value="View List / View Card"
+          />
+        </li>
+      </ul>
+    </nav>
 
-	<!-- Header Menu -->
-	<header>
-		<div>
-			<a href="index.html"></a>
-			<h1>To Do or Not To Do</h1>
-		</div>
-	</header>		
-	<nav>
-		<ul>
-			<!--Add Item-->
-			<li><input id="addTodo" type="button" onclick="toggleForm();" value="+ Add Item"></li>
-	    	<li><input type="button" onclick="toggleCardList();" value="View List / View Card"></li>
-		</ul>
-	</nav>	
-		
-	<!-- Main Content -->
-	<main>
-		<!--To Do Form-->
-		<div id="todoForm">
-            <h2>New Item</h2>
-            <form id="newTodo">
-                <fieldset>
-                    <legend>New Item</legend>
-                    <textarea id=description name=description rows="5" placeholder="Enter description" required></textarea>
-<!--                <label for="priority">Priority</label>
+    <!-- Main Content -->
+    <main>
+      <!--To Do Form-->
+      <div id="todoForm">
+        <h2>New Item</h2>
+        <form id="newTodo">
+          <fieldset>
+            <legend>New Item</legend>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              placeholder="Enter description"
+              required
+            ></textarea>
+            <!--                <label for="priority">Priority</label>
                         <select id=priority name="priority">
                             <option>Regular</option>
                             <option>High</option>
                             <option>Low</option>
                         </select>-->
-                </fieldset>
+          </fieldset>
 
-                <input type="submit" id="button" value ="Add" class="btn">
-                <input type="reset" id="button" value="Reset" class="btn">
-            </form>
-        </div>
-		
-        <h2>Items</h2>
-		To Do Items (List/Card)
-		<div id="todoList">
-			<ul id="todos" class="container">
-			</ul>
-		</div>		
-	</main>
-		
-	<!--Footer-->
-	<footer>
-		<p>Created by: Andrew Fischer - 2024</p>
-		<p><a href="ajfisch013@gmail.com">ajfisch013@gmail.com</a></p>
-	</footer>
-	<script src="js/scripts.js"></script>
-</body>
+          <input type="submit" id="button" value="Add" class="btn" />
+          <input type="reset" id="button" value="Reset" class="btn" />
+        </form>
+      </div>
+
+      <h2>Items</h2>
+      To Do Items (List/Card)
+      <div id="todoList">
+        <ul id="todos" class="container"></ul>
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <p>Created by: Andrew Fischer - 2024</p>
+      <p><a href="ajfisch013@gmail.com">ajfisch013@gmail.com</a></p>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

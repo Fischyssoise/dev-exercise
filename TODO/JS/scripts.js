@@ -1,7 +1,7 @@
 //Toggle Complete
 function toggleComplete(event) {
   event.target.classList.toggle("complete");
-};
+}
 
 //Create list item
 function createTodo(todo) {
@@ -18,7 +18,7 @@ document.querySelector("#newTodo").addEventListener("submit", function (event) {
   const inputField = document.querySelector("#description");
   const todoMessage = inputField.value;
   createTodo(todoMessage);
-  inputField.value= "";
+  inputField.value = "";
   toggleForm();
 });
 
@@ -28,7 +28,7 @@ function toggleForm() {
   todoForm.classList.toggle("display");
   const inputField = document.querySelector("#description");
   const todoMessage = inputField.value;
-  inputField.value= "";
+  inputField.value = "";
 }
 
 //List/Card View
@@ -36,4 +36,3 @@ function toggleCardList() {
   const todos = document.querySelector("ul#todos");
   todos.classList.toggle("card");
 }
-
