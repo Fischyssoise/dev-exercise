@@ -18,13 +18,13 @@
     </header>
     <nav>
       <ul>
-        <!--Add Item-->
+        <!--Add Task-->
         <li>
           <input
             id="addTodo"
             type="button"
             onclick="toggleForm();"
-            value="+ Add Item"
+            value="+ Add Task"
           />
         </li>
         <li>
@@ -41,15 +41,20 @@
     <main>
       <!--To Do Form-->
       <div id="todoForm">
-        <h2>New Item</h2>
         <form id="newTodo">
-          <fieldset>
-            <legend>New Item</legend>
+          <fieldset class="flex-form">
+            <legend>Add Task</legend>
+			<input
+                type="text"
+                class="title"
+                placeholder="Task name"
+                required
+              />
             <textarea
-              id="description"
+              class="description"
               name="description"
               rows="5"
-              placeholder="Enter description"
+              placeholder="Task description..."
               required
             ></textarea>
             <!--                <label for="priority">Priority</label>
@@ -60,14 +65,13 @@
                         </select>-->
           </fieldset>
 
-          <input type="submit" id="button" value="Add" class="btn" />
-          <input type="reset" id="button" value="Reset" class="btn" />
+          <input type="submit" value="Add" class="flex-btn" />
+          <input type="reset" value="Reset" class="flex-btn" />
         </form>
       </div>
 
       <h2>Items</h2>
-      To Do Items (List/Card)
-      <div id="todoList">
+      <div id="todoList" class="listContainer">
         <ul id="todos" class="container"></ul>
       </div>
     </main>
