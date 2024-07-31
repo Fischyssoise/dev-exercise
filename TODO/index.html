@@ -10,28 +10,36 @@
   </head>
   <body>
     <!-- Header Menu -->
-    <header>
+    <header class="container">
       <div>
-        <a href="index.html"></a>
         <h1>To Do or Not To Do</h1>
       </div>
     </header>
-    <nav>
+    <nav class="container">
       <ul>
         <!--Add Task-->
         <li>
           <input
-            id="addTodo"
             type="button"
             onclick="toggleForm();"
             value="+ Add Task"
+            class="addTask btn"
           />
         </li>
         <li>
           <input
             type="button"
             onclick="toggleCardList();"
-            value="View List / View Card"
+            value="View Card"
+            class="viewToggle btn"
+          />
+        </li>
+        <li>
+          <input
+            type="button"
+            onclick="toggleTidyList();"
+            value="Make a Mess"
+            class="tidyToggle btn hiddenBtn"
           />
         </li>
       </ul>
@@ -44,42 +52,53 @@
         <form id="newTodo">
           <fieldset class="flex-form">
             <legend>Add Task</legend>
-			<input
-                type="text"
-                class="title"
-                placeholder="Task name"
-                required
-              />
+            <input type="text" placeholder="Task name" class="title" required />
             <textarea
-              class="description"
               name="description"
               rows="5"
               placeholder="Task description..."
+              class="description"
               required
             ></textarea>
-            <!--                <label for="priority">Priority</label>
+            <!--        <label for="priority">Priority</label>
                         <select id=priority name="priority">
                             <option>Regular</option>
                             <option>High</option>
                             <option>Low</option>
                         </select>-->
+            <div class="flex-btn">
+              <input type="submit" value="+ Add" class="add" />
+              <input type="reset" value="Clear" class="clear" />
+              <input
+                type="button"
+                value="Cancel"
+                onclick="toggleForm();"
+                class="cancel"
+              />
+            </div>
           </fieldset>
-
-          <input type="submit" value="Add" class="flex-btn" />
-          <input type="reset" value="Reset" class="flex-btn" />
         </form>
       </div>
-
-      <h2>Items</h2>
-      <div id="todoList" class="listContainer">
-        <ul id="todos" class="container"></ul>
+      <div class="container left-just">
+        <div>
+          <h2>Tasks</h2>
+          <p class="instructions">
+            Tap / Click individual tasks to mark as
+            <span class="complete">complete</span>.
+          </p>
+        </div>
+      </div>
+      <div id="todoList">
+        <ul id="todos" class="container list tidy"></ul>
       </div>
     </main>
 
     <!--Footer-->
-    <footer>
-      <p>Created by: Andrew Fischer - 2024</p>
-      <p><a href="ajfisch013@gmail.com">ajfisch013@gmail.com</a></p>
+    <footer class="container right-just">
+      <div>
+        <p>Created by: Andrew Fischer - 2024</p>
+        <p><a href="ajfisch013@gmail.com">ajfisch013@gmail.com</a></p>
+      </div>
     </footer>
     <script src="js/scripts.js"></script>
   </body>
