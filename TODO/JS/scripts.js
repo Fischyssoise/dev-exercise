@@ -1,6 +1,6 @@
 const titleField = document.querySelector(".title");
 const inputField = document.querySelector(".description");
-const todos = document.querySelector("#todos");
+const todoList = document.querySelector("#todoList");
 const listCard = document.querySelector(".viewToggle");
 const viewTidy = document.querySelector(".tidyToggle");
 
@@ -14,7 +14,7 @@ function createTodo(todo, title) {
   newTitle.textContent = title;
   newDescription.textContent = todo;
   newDiv.addEventListener("click", toggleComplete);
-  todos.append(newDiv);
+  todoList.append(newDiv);
   newDiv.append(newTitle, newDescription);
 }
 
@@ -64,8 +64,8 @@ function toggleCardList() {
       viewTidy.classList.toggle("hiddenBtn");
     }
   }
-  todos.classList.toggle("list");
-  todos.classList.toggle("card");
+  todoList.classList.toggle("list");
+  todoList.classList.toggle("card");
 }
 
 //Tidy/Messy Notes Style
@@ -76,6 +76,6 @@ function toggleTidyList() {
   } else {
     tidyNotes.value = "Tidy Up";
   }
-  todos.classList.toggle("messy");
-  todos.classList.toggle("tidy");
+  todoList.classList.toggle("messy");
+  todoList.classList.toggle("tidy");
 }
