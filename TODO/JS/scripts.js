@@ -35,7 +35,6 @@ function toggleComplete(event) {
 
 //Show/hide form
 function toggleForm() {
-  
   const addTaskBtn = document.querySelector(".addTask");
   addTaskBtn.classList.toggle("hiddenBtn");
   listCard.classList.toggle("hiddenBtn");
