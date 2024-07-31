@@ -70,18 +70,21 @@ nav li {
 }
 
 /* Style rules for form elements */
-#todoForm {
-  background-color: #ffc;
+.overlay {
   margin: 2.5%;
   padding: 1%;
+  position: fixed;
   display: none;
+  size: content;
+  top: 25%;
+  left: 33%;
+  right: 33%;
+  bottom: 25%;
+  z-index: 2;
+  background-color: #ffc;
 }
 
-.hiddenBtn {
-  display: none;
-}
-
-#todoForm.display {
+.overlay.display {
   display: inline-flex;
   align-items: center;
   border-radius: 0 0 30px/45px 0;
