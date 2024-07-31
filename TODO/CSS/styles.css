@@ -1,28 +1,4 @@
-body {
-  background-image: url(../Media/cork-board-2.jpg);
-  background-size: cover;
-}
-
-.thumb {
-  max-width: 50px;
-  position: relative;
-  left: 38%;
-}
-
-.thumb.top {
-  top: -10%;
-}
-
-.thumb.middle {
-  top: -15%;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-}
-
-/*Font styles */
+/* Style rules for fonts */
 h1,
 h2,
 h3,
@@ -32,17 +8,23 @@ p {
 }
 
 h1 {
-  margin: 0.25em 0em 0.75em 0em;
+  position:relative;
+  bottom:5%;
+  color: darkgoldenrod;
+  text-shadow: -1px 1px 5px rgb(109, 14, 14), 2px -1px 3px rgb(109, 14, 14);
+  text
 }
 
 h2 {
   font-weight: bold;
   font-size: 1.5rem;
+  padding: 0 0 0.5rem;
 }
 
 p {
   font-size: 1rem;
   font-weight: normal;
+  padding: 0 0 0.5rem;
 }
 
 ul,
@@ -55,14 +37,54 @@ li {
   font-style: italic;
 }
 
-/* Style rules for nav elements */
-nav ul {
-  display: inline-flex;
-  padding-left: 20px;
+/* Style rules for body elements */
+body {
+  background-image: url(../Media/cork-board-2.jpg);
+  background-size: cover;
 }
 
-nav li {
-  padding: 2%;
+header {
+    max-height: 250px;
+}
+
+div.pictureFrame {
+    background-image: url(../Media/hamlet.png) !important;
+    background-size: cover !important;
+    min-height: 275px;
+    min-width: 275px;
+  }
+
+.thumb {
+  max-width: 50px;
+  position: relative;
+  left: 38%;
+}
+
+.thumb.top {
+  top: -5%;
+  left: 40%;
+}
+
+.thumb.middle {
+  top: -15%;
+  left: 40%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Style rules for nav elements */
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.actions > input {
+    margin: .75rem .25rem 0 0;
+    padding: .15rem;
 }
 
 .hiddenBtn {
