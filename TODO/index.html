@@ -47,7 +47,37 @@
     </nav>
     <!-- Main Content -->
     <main>
-<div class="container left-just">
+      <!--To Do Form-->
+      <form id="newTodo" class="overlay">
+        <fieldset class="flex-form">
+          <legend>Add Task</legend>
+          <input type="text" placeholder="Task name" class="title" required />
+          <textarea
+            name="description"
+            rows="5"
+            placeholder="Task description..."
+            class="description"
+            required
+          ></textarea>
+          <!--        <label for="priority">Priority</label>
+								<select id=priority name="priority">
+									<option>Regular</option>
+									<option>High</option>
+									<option>Low</option>
+								</select>-->
+          <div class="flex-btn">
+            <input type="submit" value="+ Add" class="add" />
+            <input type="reset" value="Clear" class="clear" />
+            <input
+              type="button"
+              value="Cancel"
+              onclick="toggleForm();"
+              class="cancel"
+            />
+          </div>
+        </fieldset>
+      </form>
+      <div class="container left-just">
         <div>
           <img src="../Media/thumbtack.png" class="thumb middle" />
           <h2>Tasks</h2>
@@ -57,36 +87,6 @@
           </p>
         </div>
       </div>
-      <!--To Do Form-->
-      <form id="newTodo" class="overlay">
-          <fieldset class="flex-form">
-            <legend>Add Task</legend>
-            <input type="text" placeholder="Task name" class="title" required />
-            <textarea
-              name="description"
-              rows="5"
-              placeholder="Task description..."
-              class="description"
-              required
-            ></textarea>
-            <!--        <label for="priority">Priority</label>
-                        <select id=priority name="priority">
-                            <option>Regular</option>
-                            <option>High</option>
-                            <option>Low</option>
-                        </select>-->
-            <div class="flex-btn">
-              <input type="submit" value="+ Add" class="add" />
-              <input type="reset" value="Clear" class="clear" />
-              <input
-                type="button"
-                value="Cancel"
-                onclick="toggleForm();"
-                class="cancel"
-              />
-            </div>
-          </fieldset>
-        </form>
       <div id="todoList" class="container list tidy"></div>
     </main>
     <!--Footer-->
