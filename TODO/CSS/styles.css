@@ -142,7 +142,6 @@ legend {
 }
 
 .container div {
-  text-decoration: none;
   background: #ffc;
   display: block;
   width: fit-content;
@@ -159,29 +158,6 @@ legend {
 .container.left-just div {
   background: #ccf;
 }
-
-.container.right-just div {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background-color: #cfc;
-  border-radius: 0 0 30px/45px 0 !important;
-}
-
-/*.container div::before {
-  content: "";
-  display: block;
-  
-  width: 20px;
-  height: 25px;
-  background: #ffa;
-  box-shadow: 3px -2px 10px rgba(0, 0, 0, 0.2),
-    inset 15px -15px 15px rgba(0, 0, 0, 0.3);
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  transform: skewX(25deg);
-} */
 
 .container .todoItem {
   margin: 1em;
