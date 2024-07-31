@@ -243,6 +243,14 @@ footer p {
   padding: 0.15rem;
 }
 
+.container.right-just div {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #cfc;
+    border-radius: 0 0 30px/45px 0 !important;
+  }
+
 /* Mobile Viewport: Style rule for list elements */
 @media screen and (max-width: 525px) {
   .card {
