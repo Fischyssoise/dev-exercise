@@ -11,39 +11,33 @@
   <body>
     <!-- Header Menu -->
     <header class="container">
-      <div>
+      <div class="pictureFrame">
         <img src="../Media/thumbtack.png" class="thumb top" />
-        <h1>To Do or Not To Do</h1>
+        <h1>TODO OR NOT TODO</h1>
       </div>
     </header>
-    <nav class="container">
-      <ul>
-        <!--Add Task-->
-        <li>
-          <input
-            type="button"
-            onclick="toggleForm();"
-            value="+ Add Task"
-            class="addTask btn"
-          />
-        </li>
-        <li>
-          <input
-            type="button"
-            onclick="toggleCardList();"
-            value="View Card"
-            class="viewToggle btn"
-          />
-        </li>
-        <li>
-          <input
-            type="button"
-            onclick="toggleTidyList();"
-            value="Make a Mess"
-            class="tidyToggle btn hiddenBtn"
-          />
-        </li>
-      </ul>
+    <nav class="actions">
+      <!--Add Task-->
+      <input
+        type="button"
+        onclick="toggleForm();"
+        value="+ Add Task"
+        class="addTask btn"
+      />
+
+      <input
+        type="button"
+        onclick="toggleCardList();"
+        value="View Card"
+        class="viewToggle btn"
+      />
+
+      <input
+        type="button"
+        onclick="toggleTidyList();"
+        value="Make a Mess"
+        class="tidyToggle btn hiddenBtn"
+      />
     </nav>
     <!-- Main Content -->
     <main>
