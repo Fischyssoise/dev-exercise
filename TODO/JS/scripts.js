@@ -1,8 +1,9 @@
 const titleField = document.querySelector(".title");
 const inputField = document.querySelector(".description");
-const todoList = document.querySelector("#todoList");
+const todoList = document.querySelector(".todoList");
 const listCard = document.querySelector(".viewToggle");
 const viewTidy = document.querySelector(".tidyToggle");
+const todoForm = document.querySelector(".overlay");
 
 //Create list item
 function createTodo(todo, title) {
@@ -18,7 +19,7 @@ function createTodo(todo, title) {
   newDiv.append(newTitle, newDescription);
 }
 
-document.querySelector("#newTodo").addEventListener("submit", function (event) {
+todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const todoTitle = titleField.value;
   const todoMessage = inputField.value;
@@ -34,7 +35,7 @@ function toggleComplete(event) {
 
 //Show/hide form
 function toggleForm() {
-  const todoForm = document.querySelector("#todoForm");
+  
   const addTaskBtn = document.querySelector(".addTask");
   addTaskBtn.classList.toggle("hiddenBtn");
   listCard.classList.toggle("hiddenBtn");
