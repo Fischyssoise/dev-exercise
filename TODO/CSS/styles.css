@@ -3,6 +3,25 @@ body {
   background-size: cover;
 }
 
+.thumb {
+  max-width: 50px;
+  position: relative;
+  left: 38%;
+}
+
+.thumb.top {
+  top: -10%;
+}
+
+.thumb.middle {
+  top: -15%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 /*Font styles */
 h1,
 h2,
